@@ -1,15 +1,33 @@
-Source: template-repository
-Section: unknown
+Source: golang-github-gdamore-encoding
+Section: devel
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Uploaders:
+ Paride Legovini <paride@debian.org>,
+Build-Depends:
+ debhelper-compat (= 13),
+ dh-golang,
+ golang-any,
+ golang-github-smartystreets-goconvey-dev,
+ golang-golang-x-text-dev,
+Standards-Version: 4.5.1
+Homepage: https://github.com/gdamore/encoding
+Vcs-Browser: https://salsa.debian.org/go-team/packages/golang-github-gdamore-encoding
+Vcs-Git: https://salsa.debian.org/go-team/packages/golang-github-gdamore-encoding.git
+XS-Go-Import-Path: github.com/gdamore/encoding
+Testsuite: autopkgtest-pkg-go
+Rules-Requires-Root: no
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: golang-github-gdamore-encoding-dev
+Architecture: all
+Depends:
+ golang-github-smartystreets-goconvey-dev,
+ golang-golang-x-text-dev,
+ ${misc:Depends},
+Description: Various character map encodings missing from golang.org/x/net/encoding
+ Package encoding provides a number of encodings that are missing from
+ the standard Go encoding package.
+ .
+ The UTF8 Encoder is also useful for situations where valid UTF-8 might be
+ carried in streams that contain non-valid UTF. One use case is helping to
+ cope with terminals that embed escape sequences in otherwise valid UTF-8.

@@ -1,5 +1,44 @@
-template-repository (1.0-1) unstable; urgency=medium
+golang-github-gdamore-encoding (1.0.0-3) unstable; urgency=medium
 
-  * Initial release
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository, Repository-Browse.
+  * Update standards version to 4.5.1, no changes needed.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Tue, 29 Nov 2022 17:20:24 +0000
+
+golang-github-gdamore-encoding (1.0.0-2) unstable; urgency=medium
+
+  * d/control: bump the dh compat level to 13.
+  * d/control: use the paride@debian.org alias in Uploaders.
+  * d/copyright: update copyright information for debian/*.
+  * debian/*: rewrap (cosmetic, wrap-and-sort -ast).
+
+ -- Paride Legovini <paride@debian.org>  Mon, 24 Aug 2020 22:18:58 +0000
+
+golang-github-gdamore-encoding (1.0.0-1) unstable; urgency=medium
+
+  [ Stephen Gelman ]
+  * Team upload.
+  * Bump Standards-Version to 4.5.0
+
+  [ Paride Legovini ]
+  * New upstream version 1.0.0
+  * Bump Standards-Version to 4.4.1 (no changes needed)
+  * B-D on debhelper-compat 12; drop d/compat
+  * use team+pkg-go@tracker.debian.org in Maintainer
+  * d/control: add Rules-Requires-Root: no
+
+ -- Stephen Gelman <ssgelm@debian.org>  Sat, 08 Aug 2020 00:43:32 -0500
+
+golang-github-gdamore-encoding (0.0~git20151215.b23993c-2) unstable; urgency=medium
+
+  * Team upload.
+  * Rename golang-x-text-dev to golang-golang-x-text-dev
+
+ -- Stephen Gelman <ssgelm@debian.org>  Sun, 02 Aug 2020 20:20:54 -0500
+
+golang-github-gdamore-encoding (0.0~git20151215.b23993c-1) unstable; urgency=medium
+
+  * Initial release (Closes: #904294)
+
+ -- Paride Legovini <pl@ninthfloor.org>  Sun, 22 Jul 2018 21:33:11 +0200
